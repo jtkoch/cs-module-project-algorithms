@@ -4,8 +4,14 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    x = []
+    for i in arr:           # looping through the array
+        if i in x:          # checking if the number is already there
+            x.remove(i)     # if so remove it 
+        else:
+            x.append(i)     # if it does not exist append it
+    return x[0]              
 
-    pass
 
 
 if __name__ == '__main__':
